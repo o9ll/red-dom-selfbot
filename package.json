@@ -1,4 +1,43 @@
 {
+  "name": "red-dom-selfbot",
+  "version": "1.0.0",
+  "description": "Discord selfbot multi-fonctions avec streaming et automatisation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "pm2:restart": "pm2 restart ecosystem.config.js",
+    "logs": "pm2 logs",
+    "monit": "pm2 monit"
+  },
+  "keywords": [
+    "discord",
+    "selfbot",
+    "automation",
+    "streaming",
+    "bot",
+    "multi-client",
+    "video-stream",
+    "puppeteer",
+    "moderation"
+  ],
+  "author": "OMERTA & Aptx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KirobotDev/red-dom-selfbot"
+  },
+  "bugs": {
+    "url": "https://github.com/KirobotDev/red-dom-selfbot/issues"
+  },
+  "homepage": "https://github.com/KirobotDev/red-dom-selfbot#readme",
+  "engines": {
+    "node": ">=16.6.0",
+    "npm": ">=7.0.0"
+  },
   "dependencies": {
     "@dank074/discord-video-stream": "^5.0.2",
     "@discordjs/opus": "^0.10.0",
@@ -12,10 +51,12 @@
     "clinic": "^13.0.0",
     "discord-backup": "^3.4.0",
     "discord.js": "^14.25.1",
+    "dotenv": "^16.4.5",
     "express": "^5.2.1",
     "ffmpeg-static": "^5.3.0",
     "figlet": "^1.9.4",
     "js-yaml": "^4.1.1",
+    "moment": "^2.30.1",
     "mysql2": "^3.15.3",
     "open": "^11.0.0",
     "opusscript": "^0.0.8",
@@ -28,7 +69,11 @@
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "superagent": "^10.2.3",
+    "winston": "^3.15.0",
     "wreq-js": "^2.0.1",
     "youtube-dl-exec": "^3.0.28"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
